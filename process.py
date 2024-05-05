@@ -19,7 +19,7 @@ def predict_result(arr):
 
 
 
-def get_sequence_no():
+def get_sequence_no() -> list[str]:
     result = sp.run([
     'tshark',
     '-r', 'output.pcapng',
@@ -37,7 +37,7 @@ def get_sequence_no():
     return ls
  
 
-def get_ack_number():
+def get_ack_number()-> list[str]:
     result = sp.run([
     'tshark',
     '-r', 'output.pcapng',
